@@ -25,4 +25,12 @@
   margin: auto;
 }
 
+.nav {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 2em;
+}
+
 /*# sourceMappingURL=style.css.map */
