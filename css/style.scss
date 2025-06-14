@@ -4,6 +4,8 @@
   margin: 0;
 }
 
+
+// google fonts
 .syne-mono-regular {
   font-family: "Syne Mono", monospace;
   font-weight: 400;
@@ -18,19 +20,45 @@
   font-style: normal;
 }
 
+
 .container {
   background-color: dimgray;
   width: 100vw;
   height: 100vh;
   padding: 0.5em;
-  margin: auto;
+  margin-bottom: 100px;
 }
 
-.nav {
-  background-color: whitesmoke;
+
+// nav and search bars
+.navbar, .search-bar, #search {
+  background-color: aquamarine;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.navbar, #search, .btn {
   padding: 0.5em 0.5em;
   font-size: 5em;
+}
+
+.navbar {
+  //background-color: whitesmoke;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+
+#search {
+  width: 100%;
+  border-right: 8px solid black;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.btn {
+  background-color: aquamarine;
+  width: 20%;
+  border: none;
 }

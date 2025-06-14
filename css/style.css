@@ -22,16 +22,37 @@
   width: 100vw;
   height: 100vh;
   padding: 0.5em;
-  margin: auto;
+  margin-bottom: 100px;
 }
 
-.nav {
-  background-color: whitesmoke;
+.navbar, .search-bar, #search {
+  background-color: aquamarine;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.navbar, #search, .btn {
   padding: 0.5em 0.5em;
   font-size: 5em;
+}
+
+.navbar {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+#search {
+  width: 100%;
+  border-right: 8px solid black;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.btn {
+  background-color: aquamarine;
+  width: 20%;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
