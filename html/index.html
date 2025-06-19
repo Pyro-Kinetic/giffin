@@ -23,9 +23,18 @@
 
     <!-- navbar -->
     <nav class="navbar">
-        <span class="syne-mono-regular title">Giffin</span>
-        <i class="fa-solid fa-bars"></i>
+        <span class="syne-mono-regular">Giffin</span>
+        <i onclick=showModal() class="fa-solid fa-bars"></i>
     </nav>
+
+    <!-- modal -->
+    <dialog id="gif-select">
+        <div class="select-btn-div">
+            <button class="roboto-400 select-btn">GIFs</button>
+            <button class="roboto-400 select-btn">Emojis</button>
+            <button class="roboto-400 select-btn">Stickers</button>
+        </div>
+    </dialog>
 
     <!-- search bar -->
     <form class="search-bar">
@@ -33,7 +42,13 @@
         <input type="text" id="search" name="search" placeholder="Search">
         <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
+
+    <!-- GIFs -->
+    <main class="gif-container"></main>
 </div>
 
+<!-- scripts -->
+<script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
