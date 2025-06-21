@@ -2,18 +2,55 @@ class State {
     constructor() {
         this.state = "gif"
         this.page = new Page(this.state)
+        this.searchParam = this.page.searchParam
+    }
+
+    stateSwitch() {
+        const title = document.getElementById("web-title")
+        const gifButton = document.getElementById("gifs-btn")
+        const stickerButton = document.getElementById("stickers-btn")
+        // const clipsButton = document.getElementById("emojis-btn")
+
+        title.addEventListener("click", () => {
+            this.state = "gif"
+            this.page.state = this.state
+            this.page.apiCall(this.searchParam)
+        })
+
+        gifButton.addEventListener("click", () => {
+            this.state = "gif"
+            this.page.state = this.state
+            this.page.apiCall(this.searchParam)
+        })
+
+        stickerButton.addEventListener("click", () => {
+            this.state = "sticker"
+            this.page.state = this.state
+            this.page.apiCall(this.searchParam)
+        })
+
+        // clipsButton.addEventListener("click", () => {
+        //     this.state = "clip"
+        //     this.page.state = this.state
+        //     this.page.apiCall(this.searchParam)
+        // })
     }
 
     modal() {
         const dialog = document.getElementById("gif-select")
         const menu = document.querySelector(".fa-bars")
 
-        dialog.addEventListener("click", (event) => event.target === dialog && dialog.close())
+        dialog.addEventListener("click", (event) => {
+            if (event.target === dialog) dialog.close()
+            console.log(event.target)
+        })
+
         menu.addEventListener("click", () => dialog.showModal())
     }
 
     run() {
         this.modal()
+        this.stateSwitch()
         this.page.run()
     }
 }
@@ -22,6 +59,7 @@ class Page {
     constructor(state) {
         this.searchParam = "happy"
         this.state = state
+        this.url = ""
     }
 
     search() {
@@ -40,7 +78,15 @@ class Page {
     }
 
     apiCall(inputString) {
-        axios.get(`https://api.giphy.com/v1/gifs/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`)
+        const gifUrl = `https://api.giphy.com/v1/gifs/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        const stickerUrl = `https://api.giphy.com/v1/stickers/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        // const clipUrl = `https://api.giphy.com/v1/clips/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=10&offset=0&country_code=&rating=g&lang=en`
+
+        if (this.state === "gif") this.url = gifUrl
+        // else if (this.state === "clip") this.url = clipUrl
+        else this.url = stickerUrl
+
+        axios.get(this.url)
             .then((response) => {
                 this.displayImages(response)
             })
@@ -54,9 +100,9 @@ class Page {
         const gifContainer = document.querySelector(".gif-container")
         gifContainer.innerHTML = ""
 
-        console.log("                     ")
-        console.log("displayImages", data)
-        console.log("               ")
+        // console.log("                     ")
+        // console.log("displayImages", data)
+        // console.log("               ")
 
         data.forEach((info) => {
             const url = info.images.original.url
@@ -75,7 +121,7 @@ class Page {
     run() {
         this.apiCall(this.searchParam)
         this.search()
-        console.log(this.state)
+        // console.log(this.state)
     }
 }
 
