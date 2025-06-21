@@ -1,9 +1,32 @@
-// Modal
-const dialog = document.getElementById("gif-select")
-dialog.addEventListener("click", (event) => event.target === dialog && dialog.close())
+class State {
+    constructor() {
+        this.state = "gif"
+        this.page = new Page(this.state)
+    }
 
-function showModal() {
-    dialog.showModal()
+    modal() {
+        const dialog = document.getElementById("gif-select")
+        const menu = document.querySelector(".fa-bars")
+
+        dialog.addEventListener("click", (event) => event.target === dialog && dialog.close())
+        menu.addEventListener("click", () => dialog.showModal())
+    }
+
+    run() {
+        this.modal()
+        this.page.run()
+    }
+}
+
+class Page {
+    constructor(state) {
+        this.state = state
+    }
+
+
+    run() {
+        console.log(this.state)
+    }
 }
 
 // Search function
@@ -39,7 +62,9 @@ const displayImages = (response) => {
     const data = response.data.data
     const gifContainer = document.querySelector(".gif-container")
     gifContainer.innerHTML = ""
-    console.log(data)
+    console.log("                     ")
+    console.log("displayImages", data)
+    console.log("               ")
 
     data.forEach((info) => {
         const url = info.images.original.url
@@ -54,3 +79,6 @@ const displayImages = (response) => {
         gifContainer.appendChild(imageElement)
     })
 }
+
+const main = new State()
+main.run()
