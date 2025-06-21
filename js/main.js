@@ -20,6 +20,7 @@ class State {
 
 class Page {
     constructor(state) {
+        this.searchParam = "happy"
         this.state = state
     }
 
@@ -31,10 +32,10 @@ class Page {
 
             const formData = new FormData(event.target)
             const formValues = Object.fromEntries(formData.entries())
-            const searchParam = formValues.search.trim()
+            this.searchParam = formValues.search.trim()
 
             // API call
-            this.apiCall(searchParam)
+            if (this.searchParam.length !== 0) this.apiCall(this.searchParam)
         })
     }
 
@@ -49,7 +50,7 @@ class Page {
     }
 
     run() {
-        this.apiCall("happy")
+        this.apiCall(this.searchParam)
         this.search()
         console.log(this.state)
     }
