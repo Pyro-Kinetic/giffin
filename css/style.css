@@ -41,9 +41,12 @@
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-
-#web-title, .fa-bars {
+.navbar #web-title, .navbar .fa-bars {
   margin: 0 1rem;
+  cursor: pointer;
+}
+.navbar .fa-bars:hover {
+  color: #FCF300;
 }
 
 #gif-select {
@@ -56,12 +59,7 @@
   margin: auto;
   text-align: center;
 }
-
-#gif-select:focus, .select-btn-g:focus, .select-btn-s:focus, #search:focus {
-  outline: #071013;
-}
-
-.select-btn-div {
+#gif-select .select-btn-div {
   background-color: #50FFB1;
   display: flex;
   flex-direction: column;
@@ -70,23 +68,34 @@
   width: 100%;
   height: 100%;
 }
-
-.select-btn-g {
+#gif-select .select-btn-div:hover {
   background-color: #FCF300;
+}
+#gif-select .select-btn-div .select-btn-s, #gif-select .select-btn-div .select-btn-g {
   color: #071013;
+  cursor: pointer;
   font-size: 5em;
   width: 50%;
   border: 5px solid #071013;
   border-radius: 8px;
 }
-
-.select-btn-s {
+#gif-select .select-btn-div .select-btn-g {
+  background-color: #FCF300;
+}
+#gif-select .select-btn-div .select-btn-g:hover {
+  background-color: #071013;
+  color: #50FFB1;
+}
+#gif-select .select-btn-div .select-btn-s {
   background-color: #CF1259;
-  color: #071013;
-  font-size: 5em;
-  width: 50%;
-  border: 5px solid #071013;
-  border-radius: 8px;
+}
+#gif-select .select-btn-div .select-btn-s:hover {
+  background-color: #071013;
+  color: #50FFB1;
+}
+
+#gif-select:focus, .select-btn-g:focus, .select-btn-s:focus, #search:focus {
+  outline: #071013;
 }
 
 .search-bar {
@@ -99,9 +108,8 @@
   border-radius: 8px;
   width: 100%;
 }
-
-#search::placeholder {
-  color: #071013;
+#search:hover {
+  background-color: #FCF300;
 }
 
 .btn {
@@ -109,11 +117,14 @@
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   border-left: none;
+  cursor: pointer;
   width: 20%;
 }
-
-.fa-magnifying-glass {
-  background-color: #50FFB1;
+.btn:hover {
+  background-color: #FCF300;
+}
+.btn .fa-magnifying-glass {
+  background-color: transparent;
   color: #071013;
 }
 
@@ -134,14 +145,13 @@
 .scroll-top {
   position: fixed;
   bottom: 2rem;
-  left: 50%;
-  transform: translate(-50%);
+  right: 3rem;
   background-color: #50FFB1;
   color: #071013;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  border: 2px solid #071013;
+  border: 3.5px solid #071013;
   cursor: pointer;
   display: none;
   align-items: center;
@@ -149,6 +159,7 @@
 }
 .scroll-top .fa-arrow-up {
   background-color: transparent;
+  font-size: 2.5em;
 }
 .scroll-top:hover {
   background-color: #FCF300;

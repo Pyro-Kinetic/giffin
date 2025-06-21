@@ -53,11 +53,15 @@
   color: #50FFB1;
   justify-content: space-between;
   margin-bottom: 2rem;
-}
 
+  #web-title, .fa-bars {
+    margin: 0 1rem;
+    cursor: pointer;
+  }
 
-#web-title, .fa-bars {
-  margin: 0 1rem;
+  .fa-bars:hover {
+    color: #FCF300;
+  }
 }
 
 
@@ -70,39 +74,51 @@
   padding: 0;
   margin: auto;
   text-align: center;
+
+  .select-btn-div {
+    background-color: #50FFB1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      background-color: #FCF300;
+    }
+
+    .select-btn-s, .select-btn-g {
+      color: #071013;
+      cursor: pointer;
+      font-size: 5em;
+      width: 50%;
+      border: 5px solid #071013;
+      border-radius: 8px;
+    }
+
+    .select-btn-g {
+      background-color: #FCF300;
+
+      &:hover {
+        background-color: #071013;
+        color: #50FFB1;
+      }
+    }
+
+    .select-btn-s {
+      background-color: #CF1259;
+
+      &:hover {
+        background-color: #071013;
+        color: #50FFB1;
+      }
+    }
+  }
 }
 
 #gif-select:focus, .select-btn-g:focus, .select-btn-s:focus, #search:focus {
   outline: #071013;
-}
-
-.select-btn-div {
-  background-color: #50FFB1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-
-.select-btn-g {
-  background-color: #FCF300;
-  color: #071013;
-  font-size: 5em;
-  width: 50%;
-  border: 5px solid #071013;
-  border-radius: 8px;
-}
-
-.select-btn-s {
-  background-color: #CF1259;
-  color: #071013;
-  font-size: 5em;
-  width: 50%;
-  border: 5px solid #071013;
-  border-radius: 8px;
 }
 
 
@@ -116,11 +132,10 @@
   border-right: 8px solid #071013;
   border-radius: 8px;
   width: 100%;
-}
 
-
-#search::placeholder {
-  color: #071013;
+  &:hover {
+    background-color: #FCF300;
+  }
 }
 
 
@@ -129,13 +144,17 @@
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   border-left: none;
+  cursor: pointer;
   width: 20%;
-}
 
+  &:hover {
+    background-color: #FCF300;
+  }
 
-.fa-magnifying-glass {
-  background-color: #50FFB1;
-  color: #071013;
+  .fa-magnifying-glass {
+    background-color: transparent;
+    color: #071013;
+  }
 }
 
 
@@ -164,14 +183,13 @@
 .scroll-top {
   position: fixed;
   bottom: 2rem;
-  left: 50%;
-  transform: translate(-50%);
+  right: 3rem;
   background-color: #50FFB1;
   color: #071013;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  border: 2px solid #071013;
+  border: 3.5px solid #071013;
   cursor: pointer;
   display: none;
   align-items: center;
@@ -179,6 +197,7 @@
 
   .fa-arrow-up {
     background-color: transparent;
+    font-size: 2.5em;
   }
 
   &:hover {
