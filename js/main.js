@@ -58,9 +58,31 @@ class State {
         menu.addEventListener("click", () => dialog.showModal())
     }
 
+    scrollToTop() {
+        const scrollButton = document.getElementById("scroll-top");
+
+        // Show button when the page is scrolled down
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollButton.classList.add("visible");
+            } else {
+                scrollButton.classList.remove("visible");
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
     run() {
         this.modal()
         this.stateSwitch()
+        this.scrollToTop()
         this.page.run()
     }
 }

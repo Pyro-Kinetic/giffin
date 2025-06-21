@@ -131,4 +131,31 @@
   border-radius: 8px;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #50FFB1;
+  color: #071013;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 2px solid #071013;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-top .fa-arrow-up {
+  background-color: transparent;
+}
+.scroll-top:hover {
+  background-color: #FCF300;
+}
+
+.scroll-top.visible {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -7,6 +7,7 @@
 
 //
 // google fonts
+
 .syne-mono-regular {
   font-family: "Syne Mono", monospace;
   font-weight: 400;
@@ -33,6 +34,7 @@
 
 //
 // nav and search bars
+
 .navbar, .search-bar, #search {
   background-color: #071013;
   display: flex;
@@ -139,6 +141,7 @@
 
 //
 // GIFs
+
 .gif-container {
   background-color: #071013;
   display: flex;
@@ -152,5 +155,38 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+
+//
+// scroll to top button
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #50FFB1;
+  color: #071013;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 2px solid #071013;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  .fa-arrow-up {
+    background-color: transparent;
+  }
+
+  &:hover {
+    background-color: #FCF300;
+  }
+}
+
+.scroll-top.visible {
+  display: flex;
 }
 
