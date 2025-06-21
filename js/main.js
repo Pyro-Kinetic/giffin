@@ -6,9 +6,13 @@ class State {
     }
 
     stateSwitch() {
+        const searchForm = document.getElementById("gif-search")
         const title = document.getElementById("web-title")
+
         const gifButton = document.getElementById("gifs-btn")
         const stickerButton = document.getElementById("stickers-btn")
+
+        const dialog = document.getElementById("gif-select")
         // const clipsButton = document.getElementById("emojis-btn")
 
         title.addEventListener("click", () => {
@@ -21,12 +25,18 @@ class State {
             this.state = "gif"
             this.page.state = this.state
             this.page.apiCall(this.searchParam)
+            searchForm.reset()
+            dialog.close()
+
         })
 
         stickerButton.addEventListener("click", () => {
             this.state = "sticker"
             this.page.state = this.state
             this.page.apiCall(this.searchParam)
+            searchForm.reset()
+            dialog.close()
+
         })
 
         // clipsButton.addEventListener("click", () => {
