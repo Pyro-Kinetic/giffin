@@ -53,6 +53,7 @@ body {
   .navbar {
     color: #50FFB1;
     justify-content: space-between;
+    height: 6rem;
     margin-bottom: 0.5rem;
 
     #web-title, .fa-bars {
@@ -234,7 +235,7 @@ body {
 }
 
 
-// Media Queries for larger screens
+// Media Queries for larger screens (480px)
 @media screen and (min-width: 480px) {
   .container {
     // Navigation adjustments
@@ -297,23 +298,41 @@ body {
   }
 }
 
-// Additional breakpoint for even larger screens
-@media screen and (min-width: 768px) {
+// Breakpoint for 700px and above
+@media screen and (min-width: 700px) {
   .container {
     .gif-btn-container {
       display: flex;
+      width: 30%;
+      margin-right: 0.5rem;
     }
 
     .fa-bars {
-      display: none;
+      display: none
     }
+  }
+}
 
+
+// Breakpoint for 768px and above
+@media screen and (min-width: 768px) {
+  .container {
     .gif-container {
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
       img {
         height: 350px;
       }
+    }
+  }
+}
+
+// Additional breakpoint for even larger screens
+@media screen and (min-width: 1000px) {
+  .container {
+    .gif-btn-container {
+      width: 21%;
+      margin-right: 0.5rem;
     }
   }
 }

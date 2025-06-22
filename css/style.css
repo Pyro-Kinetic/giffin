@@ -41,6 +41,7 @@ body {
 .container .navbar {
   color: #50FFB1;
   justify-content: space-between;
+  height: 6rem;
   margin-bottom: 0.5rem;
 }
 .container .navbar #web-title, .container .navbar .fa-bars {
@@ -224,18 +225,28 @@ body {
     font-size: 2em;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .container .gif-btn-container {
     display: flex;
+    width: 30%;
+    margin-right: 0.5rem;
   }
   .container .fa-bars {
     display: none;
   }
+}
+@media screen and (min-width: 768px) {
   .container .gif-container {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
   .container .gif-container img {
     height: 350px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container .gif-btn-container {
+    width: 21%;
+    margin-right: 0.5rem;
   }
 }
 
