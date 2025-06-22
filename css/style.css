@@ -20,7 +20,7 @@
   background-color: #071013;
   width: 100vw;
   height: 100vh;
-  padding: 0.5em;
+  padding: 0.1rem;
 }
 .container .navbar, .container .search-bar, .container #search {
   background-color: #071013;
@@ -28,17 +28,17 @@
   align-items: center;
 }
 .container .navbar, .container #search, .container .btn {
-  padding: 1rem 1rem;
-  font-size: 5rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 2rem;
   background-color: #071013;
 }
 .container .navbar {
   color: #50FFB1;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .container .navbar #web-title, .container .navbar .fa-bars {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   cursor: pointer;
 }
 .container .navbar .fa-bars:hover {
@@ -46,8 +46,8 @@
 }
 .container #gif-select {
   background-color: #50FFB1;
-  border: 5px solid #071013;
-  border-radius: 8px;
+  border: 3px solid #071013;
+  border-radius: 4px;
   width: 75%;
   height: 25%;
   padding: 0;
@@ -69,10 +69,10 @@
 .container #gif-select .select-btn-div .select-btn-s, .container #gif-select .select-btn-div .select-btn-g {
   color: #071013;
   cursor: pointer;
-  font-size: 5em;
+  font-size: 1.4rem;
   width: 50%;
-  border: 5px solid #071013;
-  border-radius: 8px;
+  border: 3px solid #071013;
+  border-radius: 4px;
 }
 .container #gif-select .select-btn-div .select-btn-g {
   background-color: #FCF300;
@@ -92,12 +92,12 @@
   outline: #071013;
 }
 .container .search-bar {
-  margin: 1.5rem 1.5rem;
+  margin: 0.5rem 1rem;
 }
 .container .search-bar #search {
   background-color: #50FFB1;
-  border-right: 8px solid #071013;
-  border-radius: 8px;
+  border-right: 4px solid #071013;
+  border-radius: 4px;
   width: 100%;
 }
 .container .search-bar #search:hover {
@@ -105,8 +105,8 @@
 }
 .container .search-bar .btn {
   background-color: #50FFB1;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   border-left: none;
   cursor: pointer;
   width: 20%;
@@ -122,24 +122,24 @@
   background-color: #071013;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  gap: 3rem;
+  padding: 1rem;
+  gap: 1rem;
 }
 .container .gif-container img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .container .scroll-top {
   position: fixed;
-  bottom: 2rem;
-  right: 3rem;
+  bottom: 1rem;
+  right: 1.5rem;
   background-color: #50FFB1;
   color: #071013;
-  width: 7rem;
-  height: 7rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
-  border: 3.5px solid #071013;
+  border: 3px solid #071013;
   cursor: pointer;
   display: none;
   align-items: center;
@@ -147,13 +147,65 @@
 }
 .container .scroll-top .fa-arrow-up {
   background-color: transparent;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 .container .scroll-top:hover {
   background-color: #FCF300;
 }
 .container .scroll-top.visible {
   display: flex;
+}
+
+@media screen and (min-width: 480px) {
+  .container .navbar {
+    font-size: 3rem;
+  }
+  .container .search-bar {
+    max-width: 800px;
+    margin: 1.5rem auto;
+  }
+  .container .search-bar #search {
+    font-size: 2rem;
+  }
+  .container .search-bar .btn {
+    font-size: 2rem;
+    width: 10%;
+  }
+  .container #gif-select {
+    max-width: 600px;
+  }
+  .container #gif-select .select-btn-div .select-btn-s, .container #gif-select .select-btn-div .select-btn-g {
+    font-size: 3em;
+    max-width: 300px;
+  }
+  .container .gif-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .container .gif-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .container .scroll-top {
+    width: 5rem;
+    height: 5rem;
+  }
+  .container .scroll-top .fa-arrow-up {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .gif-container {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .container .gif-container img {
+    height: 350px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
