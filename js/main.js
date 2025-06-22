@@ -6,44 +6,50 @@ class State {
     }
 
     stateSwitch() {
-        const searchForm = document.getElementById("gif-search")
         const title = document.getElementById("web-title")
+        // const clipsButton = document.getElementById("emojis-btn")
 
         const gifButton = document.getElementById("gifs-btn")
         const stickerButton = document.getElementById("stickers-btn")
 
-        const dialog = document.getElementById("gif-select")
-        // const clipsButton = document.getElementById("emojis-btn")
+        const gifBtn = document.getElementById("gifs-btn-nav")
+        const stickerBtn = document.getElementById("stickers-btn-nav")
+
 
         title.addEventListener("click", () => {
-            this.state = "gif"
-            this.page.state = this.state
-            this.page.apiCall(this.searchParam)
+            this.switcher("gif")
         })
 
         gifButton.addEventListener("click", () => {
-            this.state = "gif"
-            this.page.state = this.state
-            this.page.apiCall(this.searchParam)
-            searchForm.reset()
-            dialog.close()
-
+            this.switcher("gif")
         })
 
         stickerButton.addEventListener("click", () => {
-            this.state = "sticker"
-            this.page.state = this.state
-            this.page.apiCall(this.searchParam)
-            searchForm.reset()
-            dialog.close()
+            this.switcher("sticker")
+        })
 
+        gifBtn.addEventListener("click", ()=> {
+            this.switcher("gif")
+        })
+
+        stickerBtn.addEventListener("click", () => {
+            this.switcher("sticker")
         })
 
         // clipsButton.addEventListener("click", () => {
-        //     this.state = "clip"
-        //     this.page.state = this.state
-        //     this.page.apiCall(this.searchParam)
+        //     this.gifSwitcher("clip")
         // })
+    }
+
+    switcher(string) {
+        const searchForm = document.getElementById("gif-search")
+        const dialog = document.getElementById("gif-select")
+
+        this.state = string
+        this.page.state = this.state
+        this.page.apiCall(this.searchParam)
+        searchForm.reset()
+        dialog.close()
     }
 
     modal() {
