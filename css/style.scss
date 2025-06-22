@@ -2,12 +2,16 @@
   background-color: #071013;
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 
-
 // Google fonts
-
 .syne-mono-regular {
   font-family: "Syne Mono", monospace;
   font-weight: 400;
@@ -24,16 +28,14 @@
 
 
 // Body element
-
 .container {
   background-color: #071013;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   padding: 0.1rem;
 
 
   // Navigation bar
-
   .navbar, .search-bar, #search {
     background-color: #071013;
     display: flex;
@@ -65,7 +67,6 @@
 
 
   // Modal dialog popup and buttons
-
   #gif-select {
     background-color: #50FFB1;
     border: 3px solid #071013;
@@ -88,48 +89,66 @@
       &:hover {
         background-color: #FCF300;
       }
+    }
+  }
 
-      .select-btn-s, .select-btn-g {
-        color: #071013;
-        cursor: pointer;
-        font-size: 1.4rem;
-        width: 50%;
-        border: 3px solid #071013;
-        border-radius: 4px;
-      }
+  // State control div and buttons
+  .gif-btn-container {
+    background-color: #50FFB1;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    padding: 1rem;
 
-      .select-btn-g {
-        background-color: #FCF300;
+    &:hover {
+      background-color: #FCF300;
+    }
+  }
 
-        &:hover {
-          background-color: #071013;
-          color: #50FFB1;
-        }
-      }
+  .select-btn-s, .select-btn-g {
+    color: #071013;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 45%;
+    min-height: 100%;
+    border: 3px solid #071013;
+    border-radius: 4px;
+  }
 
-      .select-btn-s {
-        background-color: #CF1259;
+  .select-btn-g {
+    background-color: #FCF300;
 
-        &:hover {
-          background-color: #071013;
-          color: #50FFB1;
-        }
-      }
+    &:hover {
+      background-color: #071013;
+      color: #50FFB1;
+    }
+  }
+
+  .select-btn-s {
+    background-color: #CF1259;
+    color: whitesmoke;
+
+    &:hover {
+      background-color: #071013;
+      color: #50FFB1;
     }
   }
 
 
   // All focus outlines
-
   #gif-select:focus, .select-btn-g:focus, .select-btn-s:focus, #search:focus {
     outline: #071013;
   }
 
 
   // Search bar
-
   .search-bar {
     margin: 0.5rem 1rem;
+    width: calc(100% - 2rem); // Add this to account for margins
+    display: flex; // Add this
 
     #search {
       background-color: #50FFB1;
@@ -165,11 +184,12 @@
 
 
   // GIFs
-
   .gif-container {
     background-color: #071013;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
     padding: 1rem;
     gap: 1rem;
   }
@@ -183,7 +203,6 @@
 
 
   // scroll to top button
-
   .scroll-top {
     position: fixed;
     bottom: 1rem;
@@ -281,6 +300,14 @@
 // Additional breakpoint for even larger screens
 @media screen and (min-width: 768px) {
   .container {
+    .gif-btn-container {
+      display: flex;
+    }
+
+    .fa-bars {
+      display: none;
+    }
+
     .gif-container {
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 

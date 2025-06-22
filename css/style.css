@@ -2,6 +2,12 @@
   background-color: #071013;
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .syne-mono-regular {
@@ -18,8 +24,8 @@
 
 .container {
   background-color: #071013;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   padding: 0.1rem;
 }
 .container .navbar, .container .search-bar, .container #search {
@@ -66,25 +72,40 @@
 .container #gif-select .select-btn-div:hover {
   background-color: #FCF300;
 }
-.container #gif-select .select-btn-div .select-btn-s, .container #gif-select .select-btn-div .select-btn-g {
+.container .gif-btn-container {
+  background-color: #50FFB1;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  padding: 1rem;
+}
+.container .gif-btn-container:hover {
+  background-color: #FCF300;
+}
+.container .select-btn-s, .container .select-btn-g {
   color: #071013;
   cursor: pointer;
-  font-size: 1.4rem;
-  width: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 45%;
+  min-height: 100%;
   border: 3px solid #071013;
   border-radius: 4px;
 }
-.container #gif-select .select-btn-div .select-btn-g {
+.container .select-btn-g {
   background-color: #FCF300;
 }
-.container #gif-select .select-btn-div .select-btn-g:hover {
+.container .select-btn-g:hover {
   background-color: #071013;
   color: #50FFB1;
 }
-.container #gif-select .select-btn-div .select-btn-s {
+.container .select-btn-s {
   background-color: #CF1259;
+  color: whitesmoke;
 }
-.container #gif-select .select-btn-div .select-btn-s:hover {
+.container .select-btn-s:hover {
   background-color: #071013;
   color: #50FFB1;
 }
@@ -93,6 +114,8 @@
 }
 .container .search-bar {
   margin: 0.5rem 1rem;
+  width: calc(100% - 2rem);
+  display: flex;
 }
 .container .search-bar #search {
   background-color: #50FFB1;
@@ -122,6 +145,8 @@
   background-color: #071013;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
   padding: 1rem;
   gap: 1rem;
 }
@@ -200,6 +225,12 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .container .gif-btn-container {
+    display: flex;
+  }
+  .container .fa-bars {
+    display: none;
+  }
   .container .gif-container {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
