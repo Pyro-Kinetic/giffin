@@ -1,62 +1,122 @@
-# Giffin - GIF & Sticker Search App by Christensen C
+# Giffin - A GIF & Sticker Search App
 
-Giffin is a modern, responsive web application that allows users to easily search and browse GIFs and stickers powered by the Giphy API.
+**Giffin** is a responsive web application that lets users search, browse, and explore GIFs and stickers using the [Giphy API](https://developers.giphy.com/). It features a clean modern interface and seamless toggling between GIFs and stickers to enhance the user experience.
 
-## Features
+![Giffin UI Preview](https://via.placeholder.com/1000x500) <!-- Add a preview screenshot of your app here -->
 
-- 🔍 Real-time search functionality for GIFs and stickers
-- 🔄 Seamless switching between GIFs and stickers modes
-- 📱 Fully responsive design that works on mobile and desktop
-- ⬆️ Convenient scroll-to-top button
-- 🎨 Clean, modern UI with a dark theme
-- 🖼️ Grid layout for optimal content display
-- 📱 Mobile-friendly navigation with hamburger menu
+---
 
-## Technologies Used
+## ✨ Features
 
-- HTML5
-- SCSS/CSS3
-- JavaScript (ES6+)
-- Axios for API requests
-- Font Awesome for icons
-- Google Fonts (Syne Mono & Roboto)
-- Giphy API
+- **GIF & Sticker Search**: Perform quick searches for your favorite GIFs and stickers.
+- **Dynamic Toggles**: Switch between GIFs and stickers with ease.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Scroll-to-Top Button**: Quickly scroll back to the top of the page with a single click.
+- **Modern Design**: Minimalist dark-themed UI with vibrant accent colors.
+- **Modal Navigation (Mobile)**: Access navigation options through a sleek modal on smaller devices.
 
-## Dependencies
+---
 
-json { "dependencies": { "sass": "^1.89.2" } }
+## 🚀 Technologies Used
 
+| Technology | Description                                |
+|------------|--------------------------------------------|
+| **HTML5**  | Structuring and presenting content.        |
+| **SCSS/CSS3** | For responsive design and styling.      |
+| **JavaScript (ES6+)** | Core functionality programming. |
+| **Axios**  | For seamless API requests.                |
+| **Font Awesome** | Iconography for enhanced visual design. |
+| **Google Fonts (Syne Mono, Roboto)** | Fonts for improved typography. |
+| **Giphy API** | Integration to fetch GIFs and stickers. |
 
-## Getting Started
+---
 
-1. Clone the repository: bash git clone <repository-url>
+## 📦 Installation
 
-3. Set up your Giphy API key:
-   - Sign up for a Giphy API key at [developers.giphy.com](https://developers.giphy.com)
-   - Replace the API key in `main.js` with your own key
+To set up and run the project locally, follow these steps:
 
-4. Open `index.html` in your browser or serve it using a local development server
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
 
-## Usage
+2. **Install Dependencies**:
+   If using SCSS, ensure you have `node-sass` installed via NPM. The main dependency in the project is:
+   ```bash
+   npm install sass
+   ```
 
-- Use the search bar to look for specific GIFs or stickers
-- Toggle between GIFs and stickers using the buttons in the navigation
-- Click on the website title to reset to the default view
-- Use the scroll-to-top button to quickly return to the top of the page
-- On mobile devices, access the menu via the hamburger icon
+3. **Add Giphy API Key**:
+   - Register for a free [Giphy API key](https://developers.giphy.com/dashboard/).
+   - Replace the placeholder API key in `main.js` with your own:
+     ```javascript
+     const gifUrl = `https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=${inputString}&limit=100&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
+     ```
 
-## Browser Support
+4. **Run Application**:
+   Open `index.html` in your browser or serve the application using a static server:
+   ```bash
+   npx http-server # or your preferred local server
+   ```
 
-The application is compatible with modern browsers including:
-- Chrome
-- Firefox
-- Safari
-- Edge
+---
 
-## Contributing
+## 💡 How to Use
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. **Search GIFs/Stickers**: Use the search bar to look up content. Type your query and click the search icon.
+2. **Switch States**: Click the "GIFs" or "Stickers" buttons to toggle between search modes.
+3. **Mobile Navigation**: On small screens, click the hamburger menu to open the navigation modal.
+4. **Scroll to Top**: Use the floating arrow button (visible while scrolling) to return to the top of the page.
 
-## License
+---
 
-This project is open source.
+## 📷 Screenshots
+
+Here is a preview of what the application looks like:
+
+![Mobile UI](https://via.placeholder.com/400x800) <!-- Add screenshots -->
+![Desktop UI](https://via.placeholder.com/800x400) <!-- Replace placeholders with actual screenshots -->
+
+---
+
+## 👩‍💻 Code Structure
+
+- **index.html**: Application structure and layout.
+- **style.scss**: Styles written in SCSS for responsive design.
+- **main.js**: JavaScript logic for app interaction and API handling.
+  - **State Class**: Manages UI states and user interaction.
+  - **Page Class**: Manages API requests and search functionality.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To make improvements:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bugfix:
+   ```bash
+   git checkout -b feature/my-new-feature
+   ```
+3. Commit your changes and push:
+   ```bash
+   git commit -m 'Add some feature'
+   git push origin feature/my-new-feature
+   ```
+4. Open a pull request.
+
+---
+
+## ⚖️ License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+---
+
+## 📬 Contact
+
+For inquiries or feedback, feel free to reach out to the project maintainer:
+- **Name**: [Christensen Cadeau]
+- **Email**: [Your Email]
+- **GitHub**: [Your GitHub Profile](https://github.com/<your-profile>)
