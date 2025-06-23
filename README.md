@@ -1,4 +1,5 @@
 # Giffin - A GIF & Sticker Search App
+# Link - https://pyro-kinetic.github.io/giffin/
 
 **Giffin** is a responsive web application that lets users search, browse, and explore GIFs and stickers using the [Giphy API](https://developers.giphy.com/). It features a clean modern interface and seamless toggling between GIFs and stickers to enhance the user experience.
 
