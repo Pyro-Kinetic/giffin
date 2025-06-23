@@ -48,7 +48,7 @@ body {
   margin: 0 0.5rem;
   cursor: pointer;
 }
-.container .navbar .fa-bars:hover {
+.container .navbar #web-title:hover, .container .navbar .fa-bars:hover {
   color: #FCF300;
 }
 .container #gif-select {

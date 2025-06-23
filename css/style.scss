@@ -59,10 +59,10 @@ body {
     #web-title, .fa-bars {
       margin: 0 0.5rem;
       cursor: pointer;
-    }
 
-    .fa-bars:hover {
-      color: #FCF300;
+      &:hover {
+        color: #FCF300;
+      }
     }
   }
 
