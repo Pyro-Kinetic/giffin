@@ -2,7 +2,7 @@
 
 **Giffin** is a responsive web application that lets users search, browse, and explore GIFs and stickers using the [Giphy API](https://developers.giphy.com/). It features a clean modern interface and seamless toggling between GIFs and stickers to enhance the user experience.
 
-![Giffin UI Preview](https://via.placeholder.com/1000x500) <!-- Add a preview screenshot of your app here -->
+![Giffin UI Preview](https://media2.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=ae271e21n7774d1owsuv9wusfa24pb43hwrq3lz1t5hdh396&ep=v1_gifs_search&rid=giphy.gif&ct=g) <!-- Preview screen-shot of the page -->
 
 ---
 
@@ -71,15 +71,6 @@ To set up and run the project locally, follow these steps:
 
 ---
 
-## 📷 Screenshots
-
-Here is a preview of what the application looks like:
-
-![Mobile UI](https://via.placeholder.com/400x800) <!-- Add screenshots -->
-![Desktop UI](https://via.placeholder.com/800x400) <!-- Replace placeholders with actual screenshots -->
-
----
-
 ## 👩‍💻 Code Structure
 
 - **index.html**: Application structure and layout.
@@ -108,15 +99,9 @@ Contributions are welcome! To make improvements:
 
 ---
 
-## ⚖️ License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
-
----
-
 ## 📬 Contact
 
-For inquiries or feedback, feel free to reach out to the project maintainer:
-- **Name**: [Christensen Cadeau]
-- **Email**: [Your Email]
-- **GitHub**: [Your GitHub Profile](https://github.com/<your-profile>)
+For inquiries or feedback, feel free to reach out:
+- **Name**: Christensen Cadeau
+- **Email**: christensencadeau@yahoo.com
+- **GitHub**: [My GitHub Profile](https://github.com/pyro-kinetic)
