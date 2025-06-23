@@ -88,10 +88,10 @@ body {
 .container .select-btn-s, .container .select-btn-g {
   color: #071013;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   width: 45%;
-  min-height: 100%;
+  min-height: 25%;
   border: 3px solid #071013;
   border-radius: 4px;
 }
@@ -201,7 +201,7 @@ body {
     max-width: 600px;
   }
   .container #gif-select .select-btn-div .select-btn-s, .container #gif-select .select-btn-div .select-btn-g {
-    font-size: 3em;
+    font-size: 2em;
     max-width: 300px;
   }
   .container .gif-container {
@@ -230,6 +230,14 @@ body {
     display: flex;
     width: 30%;
     margin-right: 0.5rem;
+  }
+  .container #gif-select {
+    display: none;
+  }
+  .container .select-btn-s, .container .select-btn-g {
+    font-size: 1rem;
+    width: 45%;
+    min-height: 100%;
   }
   .container .fa-bars {
     display: none;

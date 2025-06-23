@@ -174,8 +174,8 @@ class Page {
      * @return {void} This method does not return a value. It handles the API response internally and updates the relevant state.
      */
     apiCall(inputString) {
-        const gifUrl = `https://api.giphy.com/v1/gifs/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
-        const stickerUrl = `https://api.giphy.com/v1/stickers/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        const gifUrl = `https://api.giphy.com/v1/gifs/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=100&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        const stickerUrl = `https://api.giphy.com/v1/stickers/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=100&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
         // const clipUrl = `https://api.giphy.com/v1/clips/search?api_key=u0KyWi18hDrrxUz86aspP5Qn9aF8bVfb&q=${inputString}&limit=10&offset=0&country_code=&rating=g&lang=en`
 
         if (this.state === "gif") this.url = gifUrl
