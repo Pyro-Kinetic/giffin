@@ -114,6 +114,7 @@ body {
   outline: #071013;
 }
 .container .search-bar {
+  background-color: #071013;
   margin: 0.5rem 1rem;
   width: calc(100% - 2rem);
   display: flex;
