@@ -101,6 +101,7 @@ Contributions are welcome! To make improvements:
 
 ## 📬 Contact
 
-For inquiries or feedback, feel free to reach out to the project maintainer:
+For inquiries or feedback, feel free to reach out:
 - **Name**: Christensen Cadeau
+- **Email**: christensencadeau@yahoo.com
 - **GitHub**: [My GitHub Profile](https://github.com/pyro-kinetic)
