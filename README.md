@@ -1,5 +1,9 @@
-# Giffin - A GIF & Sticker Search App
-# Link - https://pyro-kinetic.github.io/giffin/
+<h1 align="center" style="text-align: center;">Giffin - A GIF & Sticker Search App</h1>
+<p align="center" style="text-align: center;">
+  <a href="https://pyro-kinetic.github.io/giffin/">
+    <img src="https://img.shields.io/badge/Live-%20Demo-50FFB1?style=for-the-badge&logo=giphy&logoColor=071013&labelColor=071013" alt="Live Demo">
+  </a>
+</p>
 
 **Giffin** is a responsive web application that lets users search, browse, and explore GIFs and stickers using the [Giphy API](https://developers.giphy.com/). It features a clean modern interface and seamless toggling between GIFs and stickers to enhance the user experience.
 
@@ -22,13 +26,21 @@
 
 | Technology | Description                                |
 |------------|--------------------------------------------|
-| **HTML5**  | Structuring and presenting content.        |
-| **SCSS/CSS3** | For responsive design and styling.      |
-| **JavaScript (ES6+)** | Core functionality programming. |
-| **Axios**  | For seamless API requests.                |
-| **Font Awesome** | Iconography for enhanced visual design. |
-| **Google Fonts (Syne Mono, Roboto)** | Fonts for improved typography. |
-| **Giphy API** | Integration to fetch GIFs and stickers. |
+| **HTML5**  | Semantic structure and document layout.    |
+| **SCSS/CSS3** | Mobile-first responsive design using Grid and Flexbox. |
+| **JavaScript (ES6+)** | Modular logic using classes and modern syntax. |
+| **Axios**  | Promise-based HTTP client for API requests (via CDN). |
+| **Font Awesome** | Iconography for navigation and UI elements. |
+| **Google Fonts** | *Syne Mono* for branding and *Roboto* for content. |
+| **Giphy API** | Integration to fetch high-quality GIFs and stickers. |
+
+---
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- A modern web browser (Chrome, Firefox, Safari, Edge)
 
 ---
 
@@ -43,19 +55,25 @@ To set up and run the project locally, follow these steps:
    ```
 
 2. **Install Dependencies**:
-   If using SCSS, ensure you have `node-sass` installed via NPM. The main dependency in the project is:
+   This project uses Sass for styling. Install the compiler via NPM:
    ```bash
-   npm install sass
+   npm install
    ```
 
-3. **Add Giphy API Key**:
+3. **Compile SCSS (Optional)**:
+   If you make changes to `style.scss`, you need to recompile it to `style.css`:
+   ```bash
+   npx sass css/style.scss css/style.css --watch
+   ```
+
+4. **Add Giphy API Key**:
    - Register for a free [Giphy API key](https://developers.giphy.com/dashboard/).
-   - Replace the placeholder API key in `main.js` with your own:
+   - In `js/main.js`, update the `apiCall` method with your key:
      ```javascript
-     const gifUrl = `https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=${inputString}&limit=100&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
+     const gifUrl = `https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=${inputString}...`;
      ```
 
-4. **Run Application**:
+5. **Run Application**:
    Open `index.html` in your browser or serve the application using a static server:
    ```bash
    npx http-server # or your preferred local server
@@ -72,13 +90,26 @@ To set up and run the project locally, follow these steps:
 
 ---
 
+## 🎨 Design & Palette
+
+Giffin features a "Cyber-Dark" aesthetic with high-contrast accent colors:
+
+- **Background**: `#071013` (Deep Charcoal)
+- **Primary Accent**: `#50FFB1` (Electric Mint)
+- **Secondary Accent**: `#FCF300` (Vibrant Yellow)
+- **Tertiary Accent**: `#CF1259` (Vivid Pink)
+
+The UI is built with a **Mobile-First** approach, featuring specific breakpoints at `480px` (grid layout for results) and `700px` (desktop navigation).
+
+---
+
 ## 👩‍💻 Code Structure
 
-- **index.html**: Application structure and layout.
-- **style.scss**: Styles written in SCSS for responsive design.
-- **main.js**: JavaScript logic for app interaction and API handling.
-  - **State Class**: Manages UI states and user interaction.
-  - **Page Class**: Manages API requests and search functionality.
+- **index.html**: Application structure and layout using semantic HTML5.
+- **css/style.scss**: Modular styles with nested selectors and media queries.
+- **js/main.js**: Object-Oriented JavaScript implementation.
+  - **`State` Class**: Manages UI interactions, navigation modals, and the "Scroll to Top" behavior.
+  - **`Page` Class**: Handles search form submission, Giphy API communication, and dynamic rendering of results.
 
 ---
 
@@ -102,7 +133,10 @@ Contributions are welcome! To make improvements:
 
 ## 📬 Contact
 
-For inquiries or feedback, feel free to reach out:
-- **Name**: Christensen Cadeau
-- **Email**: christensencadeau@yahoo.com
 - **GitHub**: [My GitHub Profile](https://github.com/pyro-kinetic)
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).

@@ -1,0 +1,8 @@
+{
+  "name": "giffin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
