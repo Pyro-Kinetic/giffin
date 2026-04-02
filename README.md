@@ -7,7 +7,9 @@
 
 **Giffin** is a responsive web application that lets users search, browse, and explore GIFs and stickers using the [Giphy API](https://developers.giphy.com/). It features a clean modern interface and seamless toggling between GIFs and stickers to enhance the user experience.
 
-![Giffin UI Preview](https://media2.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=ae271e21n7774d1owsuv9wusfa24pb43hwrq3lz1t5hdh396&ep=v1_gifs_search&rid=giphy.gif&ct=g) <!-- Preview screen-shot of the page -->
+<p align="center" style="align-items: center">
+  <img src="https://media2.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=ae271e21n7774d1owsuv9wusfa24pb43hwrq3lz1t5hdh396&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Giffin UI Preview">
+</p>
 
 ---
 
